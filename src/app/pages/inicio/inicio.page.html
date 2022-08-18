@@ -1,9 +1,32 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>inicio</ion-title>
-  </ion-toolbar>
+    <ion-toolbar>
+        <ion-title>inicio</ion-title>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content>
+
+    <ion-list>
+        <!-- componentes nombres del arreglo -->
+        <!-- generar un ciclo -->
+        <ion-item *ngFor="let c of componentes" [routerLink]="c.rediredcTo" detail=True>
+            <ion-icon slot="start" [name]="c.icon" color="primary"></ion-icon>
+            {{c.name}}
+
+
+        </ion-item>
+    </ion-list>
+
+
+
+
+
+
+    <!--     <ion-button routerLink="/alert">
+        alert
+    </ion-button>
+    <ion-button routerLink="/action-sheet">
+        Sheet
+    </ion-button> -->
 
 </ion-content>
