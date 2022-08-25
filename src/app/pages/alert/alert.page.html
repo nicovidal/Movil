@@ -8,5 +8,15 @@
 </ion-header>
 
 <ion-content>
-
+    <ion-button (click)="saludoOk()" expand="full" fill="outline" shape="round">
+        Click me
+    </ion-button>
+    <ion-button (click)="confirma()" expand="full" fill="outline" shape="round">
+        Confirma
+    </ion-button>
+    <p>{{ handlerMessage }}</p>
+    <p>{{ roleMessage }}</p>
+    <ion-button (click)="input()" expand="full" fill="outline" shape="round">
+        Datos
+    </ion-button>
 </ion-content>
