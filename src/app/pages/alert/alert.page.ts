@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AlertController } from '@ionic/angular';
+import { MenuController } from '@ionic/angular';
 
 @Component({
   selector: 'app-alert',
@@ -10,9 +11,14 @@ export class AlertPage implements OnInit {
   handlerMessage = '';
   roleMessage = '';
   //se crea el objeto
-  constructor(private alertController: AlertController) { }
+  constructor(private alertController: AlertController,private menuController:MenuController) { }
 
   ngOnInit() {
+    
+  }
+
+  mostrarMenu(){
+    this.menuController.open('first');
   }
   //es un metodo
   async saludoOk() {

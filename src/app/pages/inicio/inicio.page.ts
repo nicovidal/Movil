@@ -1,13 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { MenuController } from '@ionic/angular';
 
 //crear componente.
-interface Componente {
 
-      icon:string;
-      name:string;
-      rediredcTo:string;
-
-}
 
 @Component({
   selector: 'app-inicio',
@@ -16,35 +11,18 @@ interface Componente {
 })
 export class InicioPage implements OnInit {
   //arreglo tipo interfaz componente
-  componentes:Componente[]=[
-    {
-      icon:'dice-outline',
-      name:'Alert',
-      rediredcTo:'/alert'
-    },
-    {
-
-      icon:'bug-outline',
-      name:'Action-sheet',
-      rediredcTo:'/action-sheet'
-
-    },
-    {
-      icon:'logo-playstation',
-      name:'Card',
-      rediredcTo:'/card'
-
-    }
-
-  ]
+ 
 
 
 
 
 
-  constructor() { }
+  constructor(private menuController:MenuController) { }
 
   ngOnInit() {
+  }
+  mostrarMenu(){
+    this.menuController.open('first');
   }
 
 }
