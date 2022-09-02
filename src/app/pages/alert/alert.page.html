@@ -1,7 +1,9 @@
 <ion-header>
     <ion-toolbar>
         <ion-buttons slot="start">
-            <ion-back-button defaultHref="/" text="Volver" color="primary" mode="ios"></ion-back-button>
+            <ion-button (click)="mostrarMenu()">
+                <ion-icon slot="start" name="menu-outline"></ion-icon>
+            </ion-button>
         </ion-buttons>
         <ion-title>alert</ion-title>
     </ion-toolbar>
